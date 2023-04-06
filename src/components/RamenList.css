@@ -12,17 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; 
+  flex-direction: column; 
   width: 80%;
   height: 200px;
-  
-  background-color: aqua;
+   
   
 }
 
 .ramen-list form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
 }
 
