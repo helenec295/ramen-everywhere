@@ -21,12 +21,11 @@ const RamenList = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://api.yelp.com/v3/businesses/search?term=ramen&location=${location}`,
+        `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=ramen&location=${location}`,
         {
           headers: {
             Authorization: `Bearer ${apiKey}`,
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
             'X-Requested-With': 'XMLHttpRequest',
             'Client-ID': clientId,
           },
