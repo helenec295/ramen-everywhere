@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ramen-everywhere/static/css/main.0cbcd127.css",
+    "main.js": "/ramen-everywhere/static/js/main.1bdd292f.js",
+    "static/js/787.b30ebb1a.chunk.js": "/ramen-everywhere/static/js/787.b30ebb1a.chunk.js",
+    "static/media/ramen.jpg": "/ramen-everywhere/static/media/ramen.9a46842bec04061e7f69.jpg",
+    "index.html": "/ramen-everywhere/index.html",
+    "main.0cbcd127.css.map": "/ramen-everywhere/static/css/main.0cbcd127.css.map",
+    "main.1bdd292f.js.map": "/ramen-everywhere/static/js/main.1bdd292f.js.map",
+    "787.b30ebb1a.chunk.js.map": "/ramen-everywhere/static/js/787.b30ebb1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cbcd127.css",
+    "static/js/main.1bdd292f.js"
+  ]
+}
