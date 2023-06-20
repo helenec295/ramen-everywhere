@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import './RamenList.css';
-import axios from 'axios';
-
-const apiKey = process.env.REACT_APP_YELP_API_KEY;
-const clientId = process.env.REACT_APP_YELP_CLIENT_ID;
-
-
-
+import $ from 'jquery';
 
 const RamenList = () => {
   const [location, setLocation] = useState('');
@@ -18,24 +12,21 @@ const RamenList = () => {
     fetchData();
   };
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=ramen&location=${location}`,
-        {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',
-            'Client-ID': clientId,
-          },
-        }
-      );
-      setRamenRestaurants(response.data.businesses);
-    } catch (error) {
-      console.error(error);
-    }
+  const fetchData = () => {
+    $.ajax({
+      url: 'http://localhost:3001/api/ramen',
+      data: {
+        location: location,
+      },
+      success: (data) => {
+        setRamenRestaurants(data.businesses);
+      },
+      error: (err) => {
+        console.error('Error fetching data:', err);
+      },
+    });
   };
+  
 
   return (
     <div className="ramen-list">
@@ -74,4 +65,4 @@ const RamenList = () => {
   );
 };
 
-export default RamenList
+export default RamenList;
